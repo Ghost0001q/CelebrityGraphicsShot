@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photography Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">MyPhotography</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h1>Capturing Moments</h1>
+      <p>Explore the world through my lens.</p>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+      <img src="https://source.unsplash.com/400x300/?nature,1" alt="Gallery Image" onclick="openLightbox(this.src)">
+      <img src="https://source.unsplash.com/400x300/?nature,2" alt="Gallery Image" onclick="openLightbox(this.src)">
+      <img src="https://source.unsplash.com/400x300/?nature,3" alt="Gallery Image" onclick="openLightbox(this.src)">
+      <img src="https://source.unsplash.com/400x300/?nature,4" alt="Gallery Image" onclick="openLightbox(this.src)">
+      <img src="https://source.unsplash.com/400x300/?nature,5" alt="Gallery Image" onclick="openLightbox(this.src)">
+      <img src="https://source.unsplash.com/400x300/?nature,6" alt="Gallery Image" onclick="openLightbox(this.src)">
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MyPhotography. All rights reserved.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Expanded Image">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
